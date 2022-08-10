@@ -28,13 +28,13 @@
         }
 
         html {
-           
-            background-image: var(--backGroundInit) ;
+
+            background-image: var(--backGroundInit);
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-position: center center;
             background-size: cover;
-            
+
         }
 
         .initialDiv {
@@ -50,7 +50,6 @@
             align-items: center;
             text-align: left;
             *display: inline;
-            color: aliceblue;
         }
 
         .triangulo {
@@ -76,9 +75,16 @@
             transform: skew(20deg);
         }
 
-        .img {
-            background-color: #fffdfbe8;
-            border: rgba(255, 255, 255, 0);
+        #seta {
+             height: fit-content;
+            margin-top: 50vh;
+            margin-left: 15vw;
+            margin-right: 0px;
+            position: absolute;
+            padding: 20px;
+            box-shadow: 6px -6px 0 1px #000 inset;
+            border: solid transparent;
+            border-width: 0 0 6px 6px;
         }
     </style>
 </head>
@@ -87,9 +93,7 @@
     <div class="initialDiv">
         <div class="divtriangulo">
             <div class="triangulo">
-                <button class="nextIcon">
-                    <img id="next" class="img" alt="" src="/IMG?img=next.png">
-                </button>
+                <div id="seta"></div>
             </div>
         </div>
     </div>
@@ -100,27 +104,27 @@
     var r = document.querySelector(':root');
     //r.style.setProperty('--backGroundInit', 'url(\'./_IMG/bbg.jpg\')');
     $(document).ready(function () {
-        $("#next").click(function (e) {
+        $("#seta").click(function (e) {
 
             $('html, body').animate({ scrollLeft: 1100 }, 2000);//5000
             func();
-            $("#next").css("transform", "rotate(180deg)");
+            $("#seta").css("transform", "rotate(180deg)");
         });
 
     });
     async function func() {
         var opacity = '';
-        for(let i = 70; i < 100; i++){
-            opacity = 'rgba(0, 0, 0, '+(i/100)+')';
+        for (let i = 70; i < 100; i++) {
+            opacity = 'rgba(0, 0, 0, ' + (i / 100) + ')';
             await sleep(50);
             console.log(opacity);
-             r.style.setProperty('--opacity', opacity);    
+            r.style.setProperty('--opacity', opacity);
         }
-        
+
     }
 
     function sleep(ms) {
-        return new Promise(resolve => setTimeout(resolve, ms));    
+        return new Promise(resolve => setTimeout(resolve, ms));
     }
 
 </script>

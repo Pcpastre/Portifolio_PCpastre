@@ -68,11 +68,12 @@
             white-space: nowrap;
         }
 
-        .greentingIcon {
+        .nextIcon {
             height: fit-content;
             margin-top: 50vh;
             margin-left: 15vw;
             margin-right: 0px;
+            transform: skew(20deg);
         }
 
         .img {
@@ -86,7 +87,7 @@
     <div class="initialDiv">
         <div class="divtriangulo">
             <div class="triangulo">
-                <button class="greentingIcon">
+                <button class="nextIcon">
                     <img id="next" class="img" alt="" src="/IMG?img=next.png">
                 </button>
             </div>
@@ -99,7 +100,6 @@
     var r = document.querySelector(':root');
     //r.style.setProperty('--backGroundInit', 'url(\'./_IMG/bbg.jpg\')');
     $(document).ready(function () {
-        $('html, body').animate({ scrollLeft: 0 }, 50);//5000
         $("#next").click(function (e) {
 
             $('html, body').animate({ scrollLeft: 1100 }, 2000);//5000

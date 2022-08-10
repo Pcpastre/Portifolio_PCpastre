@@ -5,29 +5,124 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>AutoStart</title>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>PcPastre Portifolio</title>
     <style>
+        :root {
+            --backGroundInit: url('/IMG?img=siteBackGround.jpg');
+            --opacity: rgba(0, 0, 0, 0.7);
+        }
+
         h1 {
             font-size: larger;
             font-family: Arial;
             font-style: normal;
+            color: rgba(240, 255, 255, 0.774);
         }
-        
+
         h2 {
             font-size: medium;
             font-family: Arial;
             font-style: normal;
         }
+
+        html {
+           
+            background-image: var(--backGroundInit) ;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+            background-size: cover;
+            
+        }
+
+        .initialDiv {
+            background-color: rgba(0, 0, 0, 0.35);
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .divtriangulo {
+            width: 25vw;
+            float: right;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+            *display: inline;
+            color: aliceblue;
+        }
+
+        .triangulo {
+            background: var(--opacity) none repeat scroll 0 0;
+            content: "";
+            height: 100vh;
+            position: absolute;
+            transform: skew(-20deg);
+            width: 200vw;
+        }
+
+        body {
+            overflow-x: hidden;
+            overflow-y: hidden;
+            white-space: nowrap;
+        }
+
+        .greentingIcon {
+            height: fit-content;
+            margin-top: 50vh;
+            margin-left: 15vw;
+            margin-right: 0px;
+        }
+
+        .img {
+            background-color: #fffdfbe8;
+            border: rgba(255, 255, 255, 0);
+        }
     </style>
 </head>
 
 <body>
-    <h1> Teste Inicial</h1>
-    <h2> work in progress</h2>
+    <div class="initialDiv">
+        <div class="divtriangulo">
+            <div class="triangulo">
+                <button class="greentingIcon">
+                    <img id="next" class="img" alt="" src="/IMG?img=next.png">
+                </button>
+            </div>
+        </div>
+    </div>
+    </div>
+
 </body>
 <script>
-   
+    var r = document.querySelector(':root');
+    //r.style.setProperty('--backGroundInit', 'url(\'./_IMG/bbg.jpg\')');
+    $(document).ready(function () {
+        $('html, body').animate({ scrollLeft: 0 }, 50);//5000
+        $("#next").click(function (e) {
+
+            $('html, body').animate({ scrollLeft: 1100 }, 2000);//5000
+            func();
+            $("#next").css("transform", "rotate(180deg)");
+        });
+
+    });
+    async function func() {
+        var opacity = '';
+        for(let i = 70; i < 100; i++){
+            opacity = 'rgba(0, 0, 0, '+(i/100)+')';
+            await sleep(50);
+            console.log(opacity);
+             r.style.setProperty('--opacity', opacity);    
+        }
+        
+    }
+
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));    
+    }
+
 </script>
 
 </html>

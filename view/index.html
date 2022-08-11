@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>PcPastre Portifolio</title>
@@ -12,13 +12,16 @@
         :root {
             --backGroundInit: url('/IMG?img=siteBackGround.jpg');
             --opacity: rgba(0, 0, 0, 0.7);
+            --overflow:'hidden';
         }
 
         h1 {
             font-size: larger;
             font-family: Arial;
             font-style: normal;
-            color: rgba(240, 255, 255, 0.774);
+            font-weight: bold;
+            color: rgba(240, 255, 255, 1);
+            padding: 25vh 5vw;
         }
 
         h2 {
@@ -37,35 +40,46 @@
 
         }
 
-        .initialDiv {
-            background-color: rgba(0, 0, 0, 0.35);
+        .divText {
+             z-index: 0;
             width: 100vw;
-            height: 100vh;
-        }
-
-        .divtriangulo {
-            width: 25vw;
             float: right;
             justify-content: center;
             align-items: center;
             text-align: left;
             *display: inline;
+            z-index: 10;
+        }
+
+        .text {
+            background: rgba(0, 0, 0, 0.35) none repeat scroll 0 0;
+            content: "";
+            height: 100vh;
+            position: absolute;
+            width: 100vw;
+        }
+
+        .divtriangulo {
+             z-index: 0;
+            width: 35vw;
+            float: right;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+            *display: inline;
+            z-index: 10;
         }
 
         .triangulo {
             background: var(--opacity) none repeat scroll 0 0;
             content: "";
-            height: 100vh;
+            height: 200vh;
             position: absolute;
             transform: skew(-20deg);
             width: 200vw;
         }
 
-        body {
-            overflow-x: hidden;
-            overflow-y: hidden;
-            white-space: nowrap;
-        }
+
 
         .nextIcon {
             height: fit-content;
@@ -76,49 +90,100 @@
         }
 
         #seta {
-             height: fit-content;
+            height: fit-content;
             margin-top: 50vh;
             margin-left: 15vw;
             margin-right: 0px;
             position: absolute;
-            padding: 20px;
-            box-shadow: 6px -6px 0 1px #000 inset;
-            border: solid transparent;
-            border-width: 0 0 6px 6px;
+        }
+        body {
+            overflow-x: hidden;
+            overflow-y: var(--overflow);
+            white-space: nowrap;
+            background-color: black;
         }
     </style>
 </head>
 
 <body>
-    <div class="initialDiv">
+    <div class="divText" id="tri">
+        <div class="text">
+            <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit<br>
+             , sed do eiusmod tempor incididunt ut labore et dolore  magna<br>
+                aliqua. <br>  <P> </P> Ut enim ad minim veniam, quis nostrud exercitation 
+                ullamco <br> laboris nisi ut aliquip ex ea commodo consequat. Duis 
+               aute <br>irure dolor in reprehenderit in voluptate velit esse cillum 
+               dolore <br> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+               non <br> proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1>
+        </div>
+    </div>
+    <div class="divtriangulo" id="tri">
+        <div class="triangulo">
+            <img id="seta" src="/IMG?img=next.png" alt="">
+        </div>
+    </div>
+
+
+
+    <!----<div class="initialDiv">
         <div class="divtriangulo">
             <div class="triangulo">
-                <div id="seta"></div>
+                <img id="seta" src="/IMG?img=next.png" alt="">
             </div>
         </div>
     </div>
-    </div>
+    </div>---->
 
 </body>
 <script>
     var r = document.querySelector(':root');
+    var nextOrRet = 0;
     //r.style.setProperty('--backGroundInit', 'url(\'./_IMG/bbg.jpg\')');
     $(document).ready(function () {
-        $("#seta").click(function (e) {
-
-            $('html, body').animate({ scrollLeft: 1100 }, 2000);//5000
-            func();
+        r.style.setProperty('--overflow', 'hidden');
+        var posicaoScroll = $(document).scrollLeft();
+        console.log(posicaoScroll);
+        if (posicaoScroll > 0) {
+            func(0);
             $("#seta").css("transform", "rotate(180deg)");
+            r.style.setProperty('--overflow', 'scroll');
+            nextOrRet = 1;
+        }
+        $("#seta").click(function (e) {
+            if (nextOrRet == 0) {
+                $('html, body').animate({ scrollLeft: 1250 }, 2000);//5000
+                $('html, body').animate({ scrolltop: 0 }, 2000);//5000
+                r.style.setProperty('--overflow', 'scroll');
+                func(0);
+                $("#seta").css("transform", "rotate(180deg)");
+                nextOrRet = 1;
+            } else {
+                r.style.setProperty('--overflow', 'hidden');
+                $('html, body').animate({ scrollLeft: 0 }, 2000);//5000
+                $('html, body').animate({ scrolltop: 0 }, 2000);//5000
+                func(1);
+                $("#seta").css("transform", "rotate(0deg)");
+                nextOrRet = 0;
+            }
         });
-
     });
-    async function func() {
+    async function func(dire) {
         var opacity = '';
-        for (let i = 70; i < 100; i++) {
-            opacity = 'rgba(0, 0, 0, ' + (i / 100) + ')';
-            await sleep(50);
-            console.log(opacity);
-            r.style.setProperty('--opacity', opacity);
+        if (dire == 0) {
+            for (let i = 70; i < 100; i++) {
+                opacity = 'rgba(0, 0, 0, ' + (i / 100) + ')';
+                await sleep(50);
+                console.log(opacity);
+                r.style.setProperty('--opacity', opacity);
+            }
+
+        } else {
+            for (let i = 100; i > 70; i--) {
+                opacity = 'rgba(0, 0, 0, ' + (i / 100) + ')';
+                await sleep(50);
+                console.log(opacity);
+                r.style.setProperty('--opacity', opacity);
+            }
         }
 
     }

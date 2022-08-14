@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1,user-scalable=no">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>PcPastre Portifolio</title>
@@ -12,22 +12,12 @@
         :root {
             --backGroundInit: url('/IMG?img=siteBackGround.jpg');
             --opacity: rgba(0, 0, 0, 0.7);
-            --overflow:'hidden';
+            --overflow: 'hidden';
         }
 
-        h1 {
-            font-size: larger;
-            font-family: Arial;
-            font-style: normal;
-            font-weight: bold;
-            color: rgba(240, 255, 255, 1);
-            padding: 25vh 5vw;
-        }
-
-        h2 {
-            font-size: medium;
-            font-family: Arial;
-            font-style: normal;
+        * {
+            margin: 0;
+            padding: 0;
         }
 
         html {
@@ -37,56 +27,108 @@
             background-attachment: fixed;
             background-position: center center;
             background-size: cover;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            overflow-x: hidden;
+            overflow-y: var(--overflow);
+            background-color: black;
 
         }
 
+        a {
+            color: #0400ff;
+            text-decoration: none;
+        }
+
+        table {
+            border: 1px solid rgb(250, 245, 245);
+            margin-top: 25vh;
+            margin-left: 25vw;
+            align-items: center;
+            align-content: center;
+        }
+
+        h1 {
+            -webkit-text-stroke: 0.2vh black;
+            font-size: 3.7vh;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            color: rgba(240, 255, 255, 1);
+            padding: 25vh 5vw;
+            margin-right: auto;
+            width: 50vw;
+            text-align: justify;
+        }
+
+        h2 {
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 3.7vh;
+            width: 50vw;
+            text-align: justify;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            color: rgba(240, 255, 255, 1);
+        }
+
+        t1 {
+            -webkit-text-stroke: 0.2vh black;
+            font-size: 5vh;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            color: rgba(240, 255, 255, 1);
+        }
+
+        t2 {
+            -webkit-text-stroke: 0.2vh black;
+            font-size: 4vh;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            color: rgba(240, 255, 255, 1);
+        }
+
         .divText {
-             z-index: 0;
+            top: 2vh;
             width: 100vw;
             float: right;
             justify-content: center;
             align-items: center;
             text-align: left;
             *display: inline;
-            z-index: 10;
         }
 
         .text {
-            background: rgba(0, 0, 0, 0.35) none repeat scroll 0 0;
+            background: rgba(0, 0, 0, 0.55) none repeat scroll 0 0;
             content: "";
             height: 100vh;
-            position: absolute;
+            position: relative;
             width: 100vw;
         }
 
         .divtriangulo {
-             z-index: 0;
+            z-index: 0;
             width: 35vw;
             float: right;
             justify-content: center;
             align-items: center;
             text-align: left;
-            *display: inline;
-            z-index: 10;
+            display: inline;
         }
 
         .triangulo {
+            top: -100vh;
             background: var(--opacity) none repeat scroll 0 0;
             content: "";
             height: 200vh;
-            position: absolute;
+            position: relative;
             transform: skew(-20deg);
             width: 200vw;
-        }
-
-
-
-        .nextIcon {
-            height: fit-content;
-            margin-top: 50vh;
-            margin-left: 15vw;
-            margin-right: 0px;
-            transform: skew(20deg);
         }
 
         #seta {
@@ -95,31 +137,143 @@
             margin-left: 15vw;
             margin-right: 0px;
             position: absolute;
+            padding: 5vh;
+            box-shadow: 2vh -0.7vw 0 0 rgba(0, 0, 0, 0.76) inset;
+            border: rgba(143, 129, 129, 0.384) solid;
+            border-width: 0 0 1vw 1vh;
+            transform: rotate(-135deg);
         }
-        body {
-            overflow-x: hidden;
-            overflow-y: var(--overflow);
-            white-space: nowrap;
-            background-color: black;
+
+        .about {
+            margin-left: 22vw;
+            transform: skew(20deg);
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+            display: list-item;
         }
+
+        .recente {
+            padding: 0.3vh 0.3vw;
+            border-radius: 2vh;
+            border: rgba(255, 255, 255, 0.8) 0.5vh solid;
+            width: fit-content;
+            height: fit-content;
+            background: rgba(170, 165, 165, 0.548) none repeat scroll 0 0;
+        }
+
+        .divBarra {
+            padding: 0vh 2vw;
+            left: 5vw;
+            height: 5vh;
+            width: 100vw;
+            border-bottom: rgb(255, 255, 255) 0.3vh solid;
+            content: "";
+            position: relative;
+        }
+
+        .divInfos {
+            z-index: 0;
+            width: 35vw;
+            float: right;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+            display: inline;
+        }
+
+        .infos {
+            top: -95vh;
+            left: 75vw;
+            height: fit-content;
+            max-height: 100vh;
+            width: fit-content;
+            max-width: 100vw;
+            position: relative;
+        }
+        #perfil{
+            height: fit-content;
+            max-height: 15vh;
+            width: fit-content;
+            max-width: 15vw;
+            padding: 0vh 25vw;
+            padding-bottom: 2vw;
+            border-radius: 0.5vh;
+            }
+        
     </style>
 </head>
 
 <body>
-    <div class="divText" id="tri">
+    <div class="divText" id="init">
         <div class="text">
-            <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit<br>
-             , sed do eiusmod tempor incididunt ut labore et dolore  magna<br>
-                aliqua. <br>  <P> </P> Ut enim ad minim veniam, quis nostrud exercitation 
-                ullamco <br> laboris nisi ut aliquip ex ea commodo consequat. Duis 
-               aute <br>irure dolor in reprehenderit in voluptate velit esse cillum 
-               dolore <br> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
-               non <br> proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1>
+
+            <h1>
+                <t1>Trabalho Mais Recente:</t1><br>
+                <p class="recente">
+                    &ensp; A inauguração da exposição “Ensinando Robôs”, um projeto
+                    feito no <a href="https://museucatavento.org.br/">Museu Catavento</a> em conjunto com o <a
+                        href="https://research.ibm.com/">Laboratorio de Pesquisa da IBM Brasil</a>
+                    , tem como intuito de democratizar o conhecimento sobre
+                    inteligência artificial.<br><br>
+                    &ensp; A mostra de longa duração tem o propósito de introduzir
+                    conceitos de IA para os visitantes do museu de forma interativa
+                    e lúdica, mostrando na prática como funciona o aprendizado das
+                    máquinas e a importância do ser humano nesse processo.<br>&ensp;&ensp;&ensp;
+                    <a href="https://museucatavento.org.br/inauguracao-ensinando-robos">Saiba Mais</a>
+                </p>
+            </h1>
         </div>
     </div>
     <div class="divtriangulo" id="tri">
         <div class="triangulo">
-            <img id="seta" src="/IMG?img=next.png" alt="">
+            <a href="#sc">
+                <div id="seta"> </div>
+            </a>
+            <div class='about'>
+                <div id="sc" class='divBarra'>
+                    <a href="#init" id="seta2">
+                        <t2>RETORNAR&ensp; &ensp; &ensp; &ensp; </t2>
+                    </a>
+                    <a href="#smim">
+                        <t2>Sobre Mim&ensp; &ensp; &ensp; &ensp; </t2>
+                    </a>
+                    <a href="#proj">
+                        <t2>Projetos&ensp; &ensp; &ensp; &ensp; </t2>
+                    </a>
+                    <a href="#cont">
+                        <t2>Contato&ensp; &ensp; &ensp; &ensp; </t2>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="divInfos">
+        <div class="infos">
+            <table>
+                <tr>
+                    <td class="img" id = "smim">
+                        <img id = "perfil" src="https://e7.pngegg.com/pngimages/867/694/png-clipart-user-profile-default-computer-icons-network-video-recorder-avatar-cartoon-maker-blue-text.png" alt="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                        <h2>
+                            &ensp; Lorem ipsum dolor sit amet, consectetur adipisci elit,
+                            sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrum exercitationem ullam
+                            corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
+                            consequatur.
+                            &ensp; Quis aute iure reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat
+                            cupiditat non proident, sunt in culpa qui officia deserunt mollit
+                            anim id est laborum. <br>&ensp;&ensp;&ensp;
+                        </h2>
+                        </p>
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
 
@@ -138,35 +292,29 @@
 <script>
     var r = document.querySelector(':root');
     var nextOrRet = 0;
-    //r.style.setProperty('--backGroundInit', 'url(\'./_IMG/bbg.jpg\')');
     $(document).ready(function () {
         r.style.setProperty('--overflow', 'hidden');
         var posicaoScroll = $(document).scrollLeft();
         console.log(posicaoScroll);
         if (posicaoScroll > 0) {
             func(0);
-            $("#seta").css("transform", "rotate(180deg)");
             r.style.setProperty('--overflow', 'scroll');
             nextOrRet = 1;
         }
-        $("#seta").click(function (e) {
+        $("#seta").click(function () {
             if (nextOrRet == 0) {
-                $('html, body').animate({ scrollLeft: 1250 }, 2000);//5000
-                $('html, body').animate({ scrolltop: 0 }, 2000);//5000
-                r.style.setProperty('--overflow', 'scroll');
                 func(0);
-                $("#seta").css("transform", "rotate(180deg)");
                 nextOrRet = 1;
-            } else {
-                r.style.setProperty('--overflow', 'hidden');
-                $('html, body').animate({ scrollLeft: 0 }, 2000);//5000
-                $('html, body').animate({ scrolltop: 0 }, 2000);//5000
-                func(1);
-                $("#seta").css("transform", "rotate(0deg)");
-                nextOrRet = 0;
             }
         });
+
+        $("#seta2").click(function () {
+            r.style.setProperty('--overflow', 'hidden');
+            func(1);
+            nextOrRet = 0;
+        });
     });
+
     async function func(dire) {
         var opacity = '';
         if (dire == 0) {
@@ -176,8 +324,10 @@
                 console.log(opacity);
                 r.style.setProperty('--opacity', opacity);
             }
-
+            r.style.setProperty('--backGroundInit', 'url(\'/IMG?img=bbg.jpg\')');
+            r.style.setProperty('--overflow', 'scroll');
         } else {
+            r.style.setProperty('--backGroundInit', 'url(\'/IMG?img=siteBackGround.jpg\')');
             for (let i = 100; i > 70; i--) {
                 opacity = 'rgba(0, 0, 0, ' + (i / 100) + ')';
                 await sleep(50);

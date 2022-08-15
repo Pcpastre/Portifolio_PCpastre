@@ -1,0 +1,218 @@
+:root {
+    --backGroundInit: url('/IMG?img=siteBackGround.jpg');
+    --opacity: rgba(0, 0, 0, 0.7);
+    --opacity2: rgba(0, 0, 0, 0.55);
+    --overflow: 'hidden';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+
+    background-image: var(--backGroundInit);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: var(--overflow);
+    background-color: black;
+
+}
+
+a {
+    color: #0400ff;
+    text-decoration: none;
+}
+
+.aboutMe {
+    border: 1px solid rgb(250, 245, 245);
+    margin-top: 25vh;
+    margin-left: 15vw;
+    align-items: center;
+    align-content: center;
+}
+.habili {
+    border: 1px solid rgb(250, 245, 245);
+    margin-left: 15vw;
+    align-items: center;
+    align-content: center;
+}
+
+h1 {
+    -webkit-text-stroke: 0.2vh black;
+    font-size: 3.7vh;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: bold;
+    color: rgba(240, 255, 255, 1);
+    padding: 25vh 5vw;
+    margin-right: auto;
+    width: 50vw;
+    text-align: justify;
+}
+
+h2 {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 3.7vh;
+    width: 50vw;
+    text-align: justify;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: bold;
+    color: rgba(240, 255, 255, 1);
+}
+h3 {
+    margin-right: 2vw;
+    font-size: 3.7vh;
+    text-align: justify;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: bold;
+    color: rgba(240, 255, 255, 1);
+}
+t1 {
+    -webkit-text-stroke: 0.2vh black;
+    font-size: 5vh;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: bold;
+    color: rgba(240, 255, 255, 1);
+}
+
+t2 {
+    font-size: 4vh;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: bold;
+    color: rgba(240, 255, 255, 1);
+}
+
+.divText {
+    top: 2vh;
+    width: 100vw;
+    float: right;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    *display: inline;
+}
+
+.text {
+    background: var(--opacity2) none repeat scroll 0 0;
+    content: "";
+    height: 100vh;
+    position: relative;
+    width: 209vw;
+}
+
+.divtriangulo {
+    z-index: 0;
+    width: 35vw;
+    float: right;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    display: inline;
+}
+
+.triangulo {
+    top: -100vh;
+    background: var(--opacity) none repeat scroll 0 0;
+    content: "";
+    height: 100vh;
+    position: relative;
+    transform: skew(-20deg);
+    width: 126vw;
+}
+
+#seta {
+    height: fit-content;
+    margin-top: 50vh;
+    margin-left: 15vw;
+    margin-right: 0px;
+    position: absolute;
+    padding: 5vh;
+    box-shadow: 2vh -0.7vw 0 0 rgba(0, 0, 0, 0.76) inset;
+    border: rgba(143, 129, 129, 0.384) solid;
+    border-width: 0 0 1vw 1vh;
+    transform: rotate(-135deg);
+}
+
+.about {
+    margin-left: 22vw;
+    transform: skew(20deg);
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    display: list-item;
+}
+
+.recente {
+    padding: 0.3vh 0.3vw;
+    border-radius: 2vh;
+    border: rgba(255, 255, 255, 0.8) 0.5vh solid;
+    width: fit-content;
+    height: fit-content;
+    background: rgba(170, 165, 165, 0.548) none repeat scroll 0 0;
+}
+
+.divBarra {
+    padding: 0vh 2vw;
+    left: 5vw;
+    height: 5vh;
+    width: 95.6vw;
+    border-bottom: rgb(255, 255, 255) 0.3vh solid;
+    content: "";
+    position: relative;
+}
+
+.divInfos {
+    z-index: 0;
+    width: 35vw;
+    float: right;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    display: inline;
+}
+
+.infos {
+    top: -95vh;
+    left: 75vw;
+    height: fit-content;
+    max-height: 100vh;
+    width: fit-content;
+    max-width: 100vw;
+    position: relative;
+}
+
+#perfil {
+    height: fit-content;
+    max-height: 15vh;
+    width: fit-content;
+    max-width: 15vw;
+    padding: 0vh 25vw;
+    padding-bottom: 2vw;
+    border-radius: 0.5vh;
+}
+
+.logo {
+   cursor:pointer;
+    height: fit-content;
+    max-height: 12vh;
+    width: fit-content;
+    max-width: 12vw;
+    padding: 1vh 8vw;
+    padding-bottom: 2vw;
+    padding-bottom: 0.2vw;
+    border-radius: 0.5vh;
+}

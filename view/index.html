@@ -7,214 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1,user-scalable=no">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./_SCR/scritp.js"></script>
+    <script src="/SCR?scr=scritp.js"></script>
+    <link rel="stylesheet" href="./_CSS/style.css" />
+    <link rel="stylesheet" href="/CSS?c=style.css" />
     <title>PcPastre Portifolio</title>
-    <style>
-        :root {
-            --backGroundInit: url('/IMG?img=siteBackGround.jpg');
-            --opacity: rgba(0, 0, 0, 0.7);
-            --overflow: 'hidden';
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-
-            background-image: var(--backGroundInit);
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-position: center center;
-            background-size: cover;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            overflow-x: hidden;
-            overflow-y: var(--overflow);
-            background-color: black;
-
-        }
-
-        a {
-            color: #0400ff;
-            text-decoration: none;
-        }
-
-        table {
-            border: 1px solid rgb(250, 245, 245);
-            margin-top: 25vh;
-            margin-left: 25vw;
-            align-items: center;
-            align-content: center;
-        }
-
-        h1 {
-            -webkit-text-stroke: 0.2vh black;
-            font-size: 3.7vh;
-            font-family: Arial;
-            font-style: normal;
-            font-weight: bold;
-            color: rgba(240, 255, 255, 1);
-            padding: 25vh 5vw;
-            margin-right: auto;
-            width: 50vw;
-            text-align: justify;
-        }
-
-        h2 {
-            margin-left: auto;
-            margin-right: auto;
-            font-size: 3.7vh;
-            width: 50vw;
-            text-align: justify;
-            font-family: Arial;
-            font-style: normal;
-            font-weight: bold;
-            color: rgba(240, 255, 255, 1);
-        }
-
-        t1 {
-            -webkit-text-stroke: 0.2vh black;
-            font-size: 5vh;
-            font-family: Arial;
-            font-style: normal;
-            font-weight: bold;
-            color: rgba(240, 255, 255, 1);
-        }
-
-        t2 {
-            -webkit-text-stroke: 0.2vh black;
-            font-size: 4vh;
-            font-family: Arial;
-            font-style: normal;
-            font-weight: bold;
-            color: rgba(240, 255, 255, 1);
-        }
-
-        .divText {
-            top: 2vh;
-            width: 100vw;
-            float: right;
-            justify-content: center;
-            align-items: center;
-            text-align: left;
-            *display: inline;
-        }
-
-        .text {
-            background: rgba(0, 0, 0, 0.55) none repeat scroll 0 0;
-            content: "";
-            height: 100vh;
-            position: relative;
-            width: 100vw;
-        }
-
-        .divtriangulo {
-            z-index: 0;
-            width: 35vw;
-            float: right;
-            justify-content: center;
-            align-items: center;
-            text-align: left;
-            display: inline;
-        }
-
-        .triangulo {
-            top: -100vh;
-            background: var(--opacity) none repeat scroll 0 0;
-            content: "";
-            height: 200vh;
-            position: relative;
-            transform: skew(-20deg);
-            width: 200vw;
-        }
-
-        #seta {
-            height: fit-content;
-            margin-top: 50vh;
-            margin-left: 15vw;
-            margin-right: 0px;
-            position: absolute;
-            padding: 5vh;
-            box-shadow: 2vh -0.7vw 0 0 rgba(0, 0, 0, 0.76) inset;
-            border: rgba(143, 129, 129, 0.384) solid;
-            border-width: 0 0 1vw 1vh;
-            transform: rotate(-135deg);
-        }
-
-        .about {
-            margin-left: 22vw;
-            transform: skew(20deg);
-            justify-content: center;
-            align-items: center;
-            text-align: left;
-            display: list-item;
-        }
-
-        .recente {
-            padding: 0.3vh 0.3vw;
-            border-radius: 2vh;
-            border: rgba(255, 255, 255, 0.8) 0.5vh solid;
-            width: fit-content;
-            height: fit-content;
-            background: rgba(170, 165, 165, 0.548) none repeat scroll 0 0;
-        }
-
-        .divBarra {
-            padding: 0vh 2vw;
-            left: 5vw;
-            height: 5vh;
-            width: 100vw;
-            border-bottom: rgb(255, 255, 255) 0.3vh solid;
-            content: "";
-            position: relative;
-        }
-
-        .divInfos {
-            z-index: 0;
-            width: 35vw;
-            float: right;
-            justify-content: center;
-            align-items: center;
-            text-align: left;
-            display: inline;
-        }
-
-        .infos {
-            top: -95vh;
-            left: 75vw;
-            height: fit-content;
-            max-height: 100vh;
-            width: fit-content;
-            max-width: 100vw;
-            position: relative;
-        }
-        #perfil{
-            height: fit-content;
-            max-height: 15vh;
-            width: fit-content;
-            max-width: 15vw;
-            padding: 0vh 25vw;
-            padding-bottom: 2vw;
-            border-radius: 0.5vh;
-            }
-        
-    </style>
 </head>
 
 <body>
     <div class="divText" id="init">
         <div class="text">
 
+            <t2><span id="time">&ensp; Bom Dia</span>! Bem Vindo ao
+                <a href="#sc" id="seta3">Meu</a> Portifolio
+            </t2>
             <h1>
                 <t1>Trabalho Mais Recente:</t1><br>
                 <p class="recente">
                     &ensp; A inauguração da exposição “Ensinando Robôs”, um projeto
-                    feito no <a href="https://museucatavento.org.br/">Museu Catavento</a> em conjunto com o <a
-                        href="https://research.ibm.com/">Laboratorio de Pesquisa da IBM Brasil</a>
-                    , tem como intuito de democratizar o conhecimento sobre
+                    feito pelo <a href="https://museucatavento.org.br/">Museu Catavento</a> em conjunto com o <a
+                        href="https://research.ibm.com/">Laboratorio de Pesquisa da IBM Brasil</a>,
+                    tem o intuito de democratizar o conhecimento sobre
                     inteligência artificial.<br><br>
                     &ensp; A mostra de longa duração tem o propósito de introduzir
                     conceitos de IA para os visitantes do museu de forma interativa
@@ -235,9 +48,13 @@
                     <a href="#init" id="seta2">
                         <t2>RETORNAR&ensp; &ensp; &ensp; &ensp; </t2>
                     </a>
-                    <a href="#smim">
+                    <a href="#perfil">
                         <t2>Sobre Mim&ensp; &ensp; &ensp; &ensp; </t2>
                     </a>
+                    <a href="#habi">
+                        <t2>Habilidades&ensp; &ensp; &ensp; &ensp; </t2>
+                    </a>
+
                     <a href="#proj">
                         <t2>Projetos&ensp; &ensp; &ensp; &ensp; </t2>
                     </a>
@@ -250,98 +67,77 @@
     </div>
     <div class="divInfos">
         <div class="infos">
-            <table>
+            <table class="aboutMe">
                 <tr>
-                    <td class="img" id = "smim">
-                        <img id = "perfil" src="https://e7.pngegg.com/pngimages/867/694/png-clipart-user-profile-default-computer-icons-network-video-recorder-avatar-cartoon-maker-blue-text.png" alt="">
+                    <td class="img">
+                        <img id="perfil"
+                            src="https://e7.pngegg.com/pngimages/867/694/png-clipart-user-profile-default-computer-icons-network-video-recorder-avatar-cartoon-maker-blue-text.png"
+                            alt="">
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <p>
                         <h2>
-                            &ensp; Lorem ipsum dolor sit amet, consectetur adipisci elit,
-                            sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
-                            Ut enim ad minim veniam, quis nostrum exercitationem ullam
-                            corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
-                            consequatur.
-                            &ensp; Quis aute iure reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat
-                            cupiditat non proident, sunt in culpa qui officia deserunt mollit
-                            anim id est laborum. <br>&ensp;&ensp;&ensp;
+                            &ensp; Meu nome é Paulo Pastre, sou estudante de bacharelado duplo
+                            em Engenharia de Instrumentação, Automação e Robotica, e Ciencias da
+                            Computação pela UFABC.<br>
+                            &ensp; Desde os 11 anos de idade acumulo publicações e premiações em
+                            diferentes competições envolvendo Robotica e empreemdedorismo. <br>&ensp;&ensp;&ensp;
                         </h2>
                         </p>
                     </td>
                 </tr>
             </table>
+            <p>
+            <h2 id="habi">
+                &ensp;&ensp;&ensp; HABILIDADES:
+            </h2>
+            </p>
+            <table class="habili">
+                <tr>
+                    <td>
+                        <img class="logo" id="cpp" src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" alt="">
+                        <br>
+                        <img class="logo" id="java" src="https://cdn-icons-png.flaticon.com/512/226/226777.png" alt="">
+                        <br>
+                        <img class="logo" id="python" src="https://cdn-icons-png.flaticon.com/512/1822/1822899.png"
+                            alt="">
+                        <br>
+                        <img class="logo" id="javaS" src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png"
+                            alt="">
+                        <br>
+                        <img class="logo" id="html" src="https://cdn-icons-png.flaticon.com/512/5968/5968267.png"
+                            alt="">
+                        <br>
+                        <img class="logo" id="css" src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png" alt="">
+                        <br>
+                        <img class="logo" id="node" src="https://cdn-icons-png.flaticon.com/512/919/919825.png" alt="">
+                        <br>
+                        <img class="logo" id="arduino"
+                            src="https://cdn.icon-icons.com/icons2/2699/PNG/512/arduino_logo_icon_170518.png" alt="">
+                    </td>
+
+                    <td>
+                        <h3>
+                            <span id="tituloHabili"></span>
+                            <br>
+                            <br>
+                            <span id="textHabili">  Selecione os icones ao lado para descobrir
+                                um pouco mais sobre as minhas habilidades.
+                            </span>
+                        </h3>
+                    </td>
+                </tr>
+            </table>
+            <p>
+            <h2 id="proj">
+                &ensp;&ensp;&ensp; PROJETOS:
+            </h2>
+            </p>
+
         </div>
     </div>
-
-
-
-    <!----<div class="initialDiv">
-        <div class="divtriangulo">
-            <div class="triangulo">
-                <img id="seta" src="/IMG?img=next.png" alt="">
-            </div>
-        </div>
-    </div>
-    </div>---->
-
 </body>
-<script>
-    var r = document.querySelector(':root');
-    var nextOrRet = 0;
-    $(document).ready(function () {
-        r.style.setProperty('--overflow', 'hidden');
-        var posicaoScroll = $(document).scrollLeft();
-        console.log(posicaoScroll);
-        if (posicaoScroll > 0) {
-            func(0);
-            r.style.setProperty('--overflow', 'scroll');
-            nextOrRet = 1;
-        }
-        $("#seta").click(function () {
-            if (nextOrRet == 0) {
-                func(0);
-                nextOrRet = 1;
-            }
-        });
-
-        $("#seta2").click(function () {
-            r.style.setProperty('--overflow', 'hidden');
-            func(1);
-            nextOrRet = 0;
-        });
-    });
-
-    async function func(dire) {
-        var opacity = '';
-        if (dire == 0) {
-            for (let i = 70; i < 100; i++) {
-                opacity = 'rgba(0, 0, 0, ' + (i / 100) + ')';
-                await sleep(50);
-                console.log(opacity);
-                r.style.setProperty('--opacity', opacity);
-            }
-            r.style.setProperty('--backGroundInit', 'url(\'/IMG?img=bbg.jpg\')');
-            r.style.setProperty('--overflow', 'scroll');
-        } else {
-            r.style.setProperty('--backGroundInit', 'url(\'/IMG?img=siteBackGround.jpg\')');
-            for (let i = 100; i > 70; i--) {
-                opacity = 'rgba(0, 0, 0, ' + (i / 100) + ')';
-                await sleep(50);
-                console.log(opacity);
-                r.style.setProperty('--opacity', opacity);
-            }
-        }
-
-    }
-
-    function sleep(ms) {
-        return new Promise(resolve => setTimeout(resolve, ms));
-    }
-
-</script>
 
 </html>

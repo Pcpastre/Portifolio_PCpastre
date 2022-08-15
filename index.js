@@ -14,6 +14,18 @@ app.get('/IMG', (req, res) =>{
   res.sendFile(path.join(__dirname+'/view/_IMG/' + img));
 });
 
+
+app.get('/CSS', (req, res) =>{
+  var c = req.query.c;
+  res.sendFile(path.join(__dirname+'/view/_CSS/' + c));
+});
+
+
+app.get('/SCR', (req, res) =>{
+  var c = req.query.scr;
+  res.sendFile(path.join(__dirname+'/view/_SCR/' + c));
+});
+
 //add the router
 app.use('/', router);
 

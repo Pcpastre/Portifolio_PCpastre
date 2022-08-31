@@ -6,6 +6,10 @@ const port = process.env.PORT || 80;
 const router = express.Router();
 
 router.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname+'/view/indexCleo.html'));
+});
+
+router.get('/old', (req, res) => {
   res.sendFile(path.join(__dirname+'/view/index.html'));
 });
 
@@ -25,6 +29,12 @@ app.get('/SCR', (req, res) =>{
   var c = req.query.scr;
   res.sendFile(path.join(__dirname+'/view/_SCR/' + c));
 });
+
+app.get('/FONT', (req, res) =>{
+  var c = req.query.f;
+  res.sendFile(path.join(__dirname+'/view/_FONT/' + c));
+});
+
 
 //add the router
 app.use('/', router);

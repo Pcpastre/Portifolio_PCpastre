@@ -3,11 +3,13 @@
 Portifolio PCpastre
 ============================
 
-Este repositorio foi criado com o intuito de demostrar os meus conhecimento de front-end e backend utilizadno node.js
+Este repositorio foi criado com o intuito de demostrar os meus conhecimento de front-end e backend utilizando node.js.
 
 O portifolio pode ser encontrado em:
 
 pcpastre.com
+
+Ele foi hospedado utilizando o azure web-apps.
 
 Licence
 =======

@@ -14,7 +14,9 @@ Ele foi hospedado utilizando o azure web-apps.
 Licence
 =======
 
-MIT
+MIT License
+
+Veja o arquivo LICENSE para mais informações
 
 
 Bug Reports and Feature Requests

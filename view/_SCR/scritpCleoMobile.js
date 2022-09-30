@@ -1,20 +1,6 @@
 
 var r = document.querySelector(':root');
 var nextOrRet = 0;
-function isMobile(){
-    const ua = navigator.userAgent;
-    if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
-      console.log("tablet");
-        window.location = "../indexCleoMobile.html";
-    }
-    else if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
-      console.log("mobile");
-        window.location = "../indexCleoMobile.html";
-    }
-    console.log("desktop");
-}
-
-isMobile();
 $(document).ready(function () {
     
     r.style.setProperty('--overflow', 'hidden');
@@ -109,4 +95,3 @@ setInterval(timeFunc, 30000);
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
-

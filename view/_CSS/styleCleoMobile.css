@@ -39,7 +39,7 @@ body {
     left: -5vw;
     top: -10vh;
 
-    background: url('./_IMG/siteBackGround.jpg');
+    background: url('/IMG?img=siteBackGround.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     filter: blur(0.3vh);

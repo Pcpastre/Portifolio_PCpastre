@@ -8,7 +8,9 @@ const router = express.Router();
 router.get('/', (req, res) => {
   res.sendFile(path.join(__dirname+'/view/indexCleo.html'));
 });
-
+router.get('/mobi', (req, res) => {
+  res.sendFile(path.join(__dirname+'/view/indexCleoMobile.html'));
+});
 router.get('/old', (req, res) => {
   res.sendFile(path.join(__dirname+'/view/index.html'));
 });

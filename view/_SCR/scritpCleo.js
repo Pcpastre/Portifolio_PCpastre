@@ -5,11 +5,11 @@ function isMobile(){
     const ua = navigator.userAgent;
     if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
       console.log("tablet");
-        window.location = "../indexCleoMobile.html";
+        window.location = "/mobi";
     }
     else if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
       console.log("mobile");
-        window.location = "../indexCleoMobile.html";
+        window.location = "/mobi";
     }
     console.log("desktop");
 }

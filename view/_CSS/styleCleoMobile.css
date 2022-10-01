@@ -17,16 +17,14 @@ html{
 }
 
 :root {
-    --backGroundInit: url('/IMG?img=siteBackGround.jpg');
+    --backGroundInit: url('./_IMG/siteBackGround.jpg');
     --opacity: rgba(0, 0, 0, 0.25);
     --opacity2: rgba(0, 0, 0, 0.55);
-    --overflow: 'hidden';
 }
 
 body {
     
     overflow-x: hidden;
-    overflow-y: var(--overflow);
     background-color: black;
     
     scroll-behavior: smooth;
@@ -41,7 +39,7 @@ body {
     left: -5vw;
     top: -10vh;
 
-    background: url('/IMG?img=siteBackGround.jpg');
+    background: url('./_IMG/siteBackGround.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     filter: blur(0.3vh);
@@ -206,8 +204,7 @@ body {
     position: absolute;
     width: 39.51vw;
     height: 11.66vh;
-    left: 6.389vw;
-    top: -1vh;
+    left: 4.389vw;
 
     font-family: Bangers;
     font-style: normal;
@@ -232,11 +229,11 @@ body {
     font-family: Bangers;
     font-style: normal;
     font-weight: 400;
-    font-size: 5.556vh;
-    line-height: 5.6vh;
+    font-size: 2.556vh;
+    line-height: 1.6vh;
     display: flex;
     align-items: center;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.01em;
 
     color: #000000;
 
@@ -245,10 +242,10 @@ body {
 
 .recente {
     position: absolute;
-    width: 63.4445vw;
-    height: 43vh;
+    width: 90.4445vw;
+    height: fit-content;
     left: 5.486vw;
-    top: 55.888vh;
+    top: 35.888vh;
     display: flex;
 
     background: rgba(255, 255, 255, 0.5);
@@ -282,8 +279,8 @@ t1{
     font-family: Bangers;
     font-style: normal;
     font-weight: 400;
-    font-size: 5.556vh;
-    line-height: 5.6vh;
+    font-size: 2.556vh;
+    line-height: 1.6vh;
     display: flex;
     align-items: center;
     letter-spacing: 0.1em;
@@ -293,7 +290,7 @@ t1{
 }
 t2{
     
-    padding-top: 1.5vh;
+    padding-top: 2.5vh;
     padding-left: 1vh;
     padding-right: 1vh;
     text-align: center;
@@ -301,8 +298,8 @@ t2{
     font-family: Bangers;
     font-style: normal;
     font-weight: 400;
-    font-size: 4.556vh;
-    line-height: 5.6vh;
+    font-size: 2vh;
+    line-height: 1.6vh;
     display: flex;
     align-items: center;
     letter-spacing: 0.1em;
@@ -361,13 +358,12 @@ h1 {
 .sobreMim {
 
     position: absolute;
-    width: 72vw;
-    height: 62.22vh;
-    left: 140vw;
+    width: 95vw;
+    height: fit-content;
+    left: 125vw;
     top: 25vh;
     display: flex;
     align-items: center;
-
 
     background: rgba(255, 255, 255, 0.9);
     border: 0.12vh solid #000000;
@@ -390,10 +386,10 @@ h3 {
     font-family: 'Inconsolata';
     font-style: normal;
     font-weight: bold;
-    font-size: 4.55vh;
+    font-size: 2.55vh;
     
-    letter-spacing: 0.1em;
-    line-height: 4.3334vh;
+    letter-spacing: 0.01em;
+    line-height: 2.3334vh;
 
     color: #000000;
 
@@ -408,10 +404,10 @@ h4 {
     font-family: 'Inconsolata';
     font-style: normal;
     font-weight: bold;
-    font-size: 4.55vh;
+    font-size: 2.55vh;
     
-    letter-spacing: 0.1em;
-    line-height: 4.3334vh;
+    letter-spacing: 0.01em;
+    line-height: 2.3334vh;
 
     color: #000000;
 
@@ -441,10 +437,10 @@ h5 {
     text-align: center;
     display: inline;
     position: absolute;
-    width: 72vw;
-    height: 130vh;
-    left: 140vw;
-    top: 100vh;
+    width: 95vw;
+    height: fit-content;
+    left: 125vw;
+    top: 70vh;
 
 
     background: rgba(255, 255, 255, 0.9);
@@ -466,16 +462,16 @@ h5 {
 
  .projet {
 
-    float: right;
+    float: center;
     justify-content: center;
     align-items: center;
     text-align: center;
     display: inline;
     position: absolute;
-    width: 72vw;
+    width: 95vw;
     height: fit-content;
-    left: 140vw;
-    top: 240vh;
+    left: 125vw;
+    top: 160vh;
 
 
     background: rgba(255, 255, 255, 0.9);
@@ -493,7 +489,7 @@ h5 {
     width: 100vw;
     height: 30vh;
     left: 125vw;
-    top: 302vh;
+    top: 270vh;
 
 
     background: rgba(0, 0, 0, 0.0);
@@ -502,6 +498,7 @@ h5 {
 
 .projets {
     margin-top: 1vh;
+    margin-left: 20vw;
     cursor:pointer;
     height: fit-content;
     max-height: 21vh;

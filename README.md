@@ -1,6 +1,4 @@
-# Portifolio_PCpastre
-
-Portifolio PCpastre
+# Portifolio PCpastre
 ============================
 
 Este repositorio foi criado com o intuito de demostrar os meus conhecimento de front-end e backend utilizando node.js.

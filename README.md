@@ -9,7 +9,7 @@ pcpastre.com
 
 Ele foi hospedado utilizando o azure web-apps.
 
-Licence
+Licence 1
 =======
 
 MIT License
